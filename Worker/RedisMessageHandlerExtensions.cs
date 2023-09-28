@@ -1,4 +1,5 @@
-﻿using Application;
+﻿using Application.CreatePost;
+using Application.Shared;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection;

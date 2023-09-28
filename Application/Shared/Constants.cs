@@ -1,4 +1,4 @@
-﻿namespace Infrastructure
+﻿namespace Application.Shared
 {
     public static class Constants
     {

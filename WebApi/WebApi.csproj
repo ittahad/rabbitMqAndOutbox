@@ -8,8 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="MiniApp.Api" Version="1.0.7-alpha01" />
-    <PackageReference Include="MiniApp.MongoDB" Version="1.0.1-alpha01" />
-    <PackageReference Include="MiniApp.Redis" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

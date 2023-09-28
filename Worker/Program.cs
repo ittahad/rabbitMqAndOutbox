@@ -2,12 +2,13 @@
 using System.Reflection;
 using MediatR;
 using MiniApp.Core;
-using Infrastructure;
-using Application;
 using Microsoft.Extensions.DependencyInjection;
 using Worker;
 using MiniApp.Api;
 using MiniApp.Redis;
+using Application.CreatePost;
+using Application.Shared;
+using Application.AddComment;
 
 var options = new MinimalHostOptions
 {

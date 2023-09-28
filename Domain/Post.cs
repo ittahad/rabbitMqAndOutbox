@@ -2,10 +2,17 @@
 
 namespace Domain
 {
-    public class Post
+    public class Comment
     {
-        public string? Id { get; set; }
-        public string? PostContent { get; set; }
-        public DateTime? CreateDate { get; set; }
+        public Comment(string _id, string _content, DateTime _createDate) 
+        { 
+            Id = _id;
+            CommentContent = _content;
+            CreateDate = _createDate;
+        }
+
+        public string? Id { get; private set; }
+        public string? CommentContent { get; private set; }
+        public DateTime? CreateDate { get; private set; }
     }
 }

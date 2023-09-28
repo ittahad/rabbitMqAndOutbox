@@ -1,6 +1,7 @@
-﻿using MediatR;
+﻿using Application.CreatePost;
+using MediatR;
 
-namespace Application
+namespace Application.PostToOutbox
 {
     public class PostOutboxCommandHandler : IRequestHandler<OutboxCommand<PostCommand>, bool>
     {

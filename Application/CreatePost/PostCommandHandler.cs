@@ -1,10 +1,10 @@
 ﻿using MiniApp.Core;
 
-namespace Application
+namespace Application.CreatePost
 {
-    public class CommentCommandHandler : MinimalCommandHandler<CommentCommand, bool>
+    public class PostCommandHandler : MinimalCommandHandler<PostCommand, bool>
     {
-        public override async Task<bool> Handle(CommentCommand message)
+        public override async Task<bool> Handle(PostCommand message)
         {
             Console.WriteLine("Save the post in database");
 
@@ -13,7 +13,7 @@ namespace Application
             Console.WriteLine("Compress the post thumbnails");
 
             Console.WriteLine("And many more...");
-            
+
             return await Task.FromResult(true);
         }
     }
