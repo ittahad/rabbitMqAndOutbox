@@ -6,6 +6,8 @@ using Infrastructure;
 using Application;
 using Microsoft.Extensions.DependencyInjection;
 using Worker;
+using MiniApp.Api;
+using MiniApp.Redis;
 
 var options = new MinimalHostOptions
 {
@@ -21,9 +23,10 @@ var builder = new MinimalHostingBuilder(options)
                 services.AddMediatR(Assembly.GetEntryAssembly()!);
                 services.AddMediatR(Assembly.GetExecutingAssembly());
                 services.AddHostedService<PostsHostedService>();
+                services.AddSingleton<IRedisClient, RedisClient>();
+                services.RegisterRedisMessages(typeof(CommentCommand).Assembly);
             });
-        },
-        messageHandlerAssembly: typeof(PostCommand).Assembly);
+        }, messageHandlerAssembly: typeof(PostCommand).Assembly);
 
 builder.Run();
 

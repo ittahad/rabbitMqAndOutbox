@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="MiniApp.Api" Version="1.0.7-alpha01" />
     <PackageReference Include="MiniApp.MongoDB" Version="1.0.1-alpha01" />
+    <PackageReference Include="MiniApp.Redis" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
